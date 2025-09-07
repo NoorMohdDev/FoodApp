@@ -8,7 +8,7 @@ function Navbar() {
   return (
     <nav className='flex justify-between items-center py-8 container mx-auto flex-col lg:flex-row gap-5 lg:gap-0 '>
       <NavLink to={"/"}>
-        <h2 className="text-2xl font-semibold">FoodRecipe</h2>
+        <h2 className="text-2xl font-semibold text-green-600">Search Food Recipe</h2>
       </NavLink>
       <form onSubmit={handleSubmit}>
         <input
@@ -17,14 +17,15 @@ function Navbar() {
           value={searchParam}
           onChange={(event) => setSearchParam(event.target.value)}
           placeholder="Enter Items..."
-          className="bg-white/75 p-3 px-8 rounded-full outline-none lg:w-96 shadow-lg shadow-red-100 focus:shadow-red-200"
+          className="bg-green-100/75 p-3 px-8 rounded-xl 
+          outline-none border lg:w-96 shadow-lg shadow-green-100 focus:shadow-green"
         />
       </form>
       <ul className="flex gap-5">
         <li>
           <NavLink
             to={"/"}
-            className="text-black hover:text-gray-700 duration-300"
+            className="text-green-600 hover:text-green-700 duration-300"
           >
             Home
           </NavLink>
@@ -32,7 +33,7 @@ function Navbar() {
         <li>
           <NavLink
             to={"/favorites"}
-            className="text-black hover:text-gray-700 duration-300"
+            className="text-green-600 hover:text-green-700 duration-300"
           >
             Favorites
           </NavLink>

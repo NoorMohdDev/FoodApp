@@ -28,7 +28,6 @@ export default function GlobalState({ children }) {
         setSearchParam("");
         navigate('/')
       }
-      console.log(recipeList);
 
     } catch (e) {
       console.log(e);
@@ -43,7 +42,6 @@ export default function GlobalState({ children }) {
     );
     const data = await response.json();
 
-    console.log(data);
     if (data) {
       setRecipeDetailsData(data);
     }
@@ -63,9 +61,6 @@ export default function GlobalState({ children }) {
 
     setFavoritesList(cpyFavoritesList)
   }
-
-  console.log(favoritesList, 'favoritesList');
-
   return (
     <GlobalContext.Provider
       value={{

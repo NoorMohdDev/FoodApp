@@ -13,7 +13,7 @@ export default function Home() {
         recipeList.map((item) => <RecipeItem key={item.id}  item={item} />)
       ) : (
         <div>
-          <p className="lg:text-4xl text-xl text-center text-black font-extrabold">
+          <p className="lg:text-4xl text-xl text-center text-green-600 font-extrabold">
             Nothing to show. Please search something
           </p>
         </div>

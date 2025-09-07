@@ -29,16 +29,16 @@ export default function Details() {
         </div>
       </div>
       <div className="flex flex-col gap-3">
-        <span className="text-sm text-cyan-700 font-medium">
+        <span className="text-sm text-green-700 font-medium">
           {recipeDetailsData?.cuisine}
         </span>
-        <h3 className="font-bold text-2xl truncate text-black">
+        <h3 className="font-bold text-2xl truncate text-green-600">
           {recipeDetailsData?.name}
         </h3>
         <div>
           <button
             onClick={() => handleAddToFavorite(recipeDetailsData)}
-            className="p-3 px-8 rounded-lg text-sm uppercase font-medium tracking-wider mt-3 inline-block shadow-md bg-black text-white"
+            className="p-3 px-8 rounded-lg text-sm uppercase font-medium tracking-wider mt-3 inline-block shadow-md bg-green-600 text-white"
           >
             {favoritesList && favoritesList.length > 0 && favoritesList.findIndex(
               (item) => item.id === recipeDetailsData?.id
@@ -48,14 +48,24 @@ export default function Details() {
           </button>
         </div>
         <div>
-          <span className="text-2xl font-semibold text-black">
+          <span className="text-2xl font-semibold text-green-700">
             Ingredients:
           </span>
-          <ul className="flex flex-col gap-3">
+          <ul className="flex flex-col mt-4 gap-3">
             {recipeDetailsData?.ingredients.map((ingredient,index) => (
               <li key={index}>
-                <span className="text-2xl font-semibold text-black">
+                <span className="text-1xl font-semibold text-black">
                   {ingredient}
+                </span>
+              </li>
+            ))}
+            <span className="text-2xl font-semibold text-green-700">
+            Instructions:
+          </span>
+            {recipeDetailsData?.instructions.map((instruction,index) => (
+              <li key={index}>
+                <span className="text-1xl font-semibold text-black">
+                  {instruction}
                 </span>
               </li>
             ))}
